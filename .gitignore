@@ -1,4 +1,5 @@
 cache
 dist
 .vscode
-*/*.pyc
+*.pyc
+__pycache_
