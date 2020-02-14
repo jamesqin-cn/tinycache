@@ -2,13 +2,17 @@
 from __future__ import print_function
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+
 setup(
     name = "tinycache",
-    version = "0.1.1",
+    version = "0.1.2",
     author = "jamesqin",
     author_email = "jamesqin@vip.qq.com",
     description = "tinycache a python modules base on local file for any python data struct",
-    long_description = "tinycache is a python modules base on local file for any python data struct",
+    long_description = long_description,
+    long_description_content_type="text/markdown",
     license = "MIT",
     url = "https://github.com/jamesqin-cn/tinycache",
     packages = find_packages(),
