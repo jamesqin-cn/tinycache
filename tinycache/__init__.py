@@ -11,10 +11,10 @@ import hashlib
 def GenKey(method_name, args, kw):
     key_str = method_name + "("
     for arg in args:
-        if str(type(arg)) == "<type 'instance'>":
+        if str(type(arg)) == "<type 'instance'>" or ' object at 0x' in str(arg):
             key_str = "{}&class={}".format(key_str, arg.__class__)
-        elif ' object at 0x' in str(arg):
-            key_str = "{}&class={}".format(key_str, arg.__class__)
+            for name,val in vars(arg).items():
+                key_str = "{}&self.{}={}".format(key_str, name, val)
         else:
             key_str = "{}&{}={}".format(key_str, str(type(arg)), arg)
     for (k,v) in kw.items():

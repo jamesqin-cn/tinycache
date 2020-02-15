@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setup(
     name = "tinycache",
-    version = "0.1.2",
+    version = "0.1.3",
     author = "jamesqin",
     author_email = "jamesqin@vip.qq.com",
     description = "tinycache a python modules base on local file for any python data struct",
